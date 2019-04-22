@@ -189,7 +189,6 @@ public class SettingsActivity extends AppCompatActivity {
                      });
         }
     }
-
     private void RetrieveUserInfo() {
         RootRef.child("Users").child(currentUserID)
                 .addValueEventListener(new ValueEventListener() {
