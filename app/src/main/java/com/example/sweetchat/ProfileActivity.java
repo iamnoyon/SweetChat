@@ -151,6 +151,9 @@ public class ProfileActivity extends AppCompatActivity {
                     if(currentState.equals("request_received")){
                         AcceptChatRequest();
                     }
+                    if(currentState.equals("friends")){
+                        RemoveSpecificContacts();
+                    }
                 }
             });
         }
@@ -244,6 +247,31 @@ public class ProfileActivity extends AppCompatActivity {
                                                             }
                                                         });
                                             }
+                                        }
+                                    });
+                        }
+                    }
+                });
+    }
+
+    private void RemoveSpecificContacts() {
+        ContactsRef.child(senderUserID).child(receiveUserID)
+                .removeValue()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            ContactsRef.child(receiveUserID).child(senderUserID)
+                                    .removeValue()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            SendMessageRequestButton.setEnabled(true);
+                                            currentState = "new";
+                                            SendMessageRequestButton.setText("Send Message");
+
+                                            DeleteMessageRequestButton.setVisibility(View.INVISIBLE);
+                                            DeleteMessageRequestButton.setEnabled(false);
                                         }
                                     });
                         }
