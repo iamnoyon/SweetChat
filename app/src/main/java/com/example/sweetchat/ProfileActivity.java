@@ -18,6 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.concurrent.Semaphore;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -112,6 +114,9 @@ public class ProfileActivity extends AppCompatActivity {
                     if(currentState.equals("new")){
                         SendChatRequests();
                     }
+                    if(currentState.equals("request_sent")){
+                        CancelChatRequest();
+                    }
                 }
             });
         }
@@ -137,6 +142,29 @@ public class ProfileActivity extends AppCompatActivity {
                                                 currentState = "request_sent";
                                                 SendMessageRequestButton.setText("Cancel Request");
                                             }
+                                        }
+                                    });
+                        }
+                    }
+                });
+    }
+
+
+    private void CancelChatRequest() {
+        ChatRequestRef.child(senderUserID).child(receiveUserID)
+                .removeValue()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            ChatRequestRef.child(receiveUserID).child(senderUserID)
+                                    .removeValue()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            SendMessageRequestButton.setEnabled(true);
+                                            currentState = "new";
+                                            SendMessageRequestButton.setText("Send Message");
                                         }
                                     });
                         }
