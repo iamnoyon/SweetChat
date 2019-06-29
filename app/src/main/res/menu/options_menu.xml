@@ -20,7 +20,7 @@
 
     </item>
     <item
-        android:title="Logo Out"
+        android:title="Log Out"
         android:id="@+id/main_logout_option"
         app:showAsAction="never">
 
