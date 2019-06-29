@@ -35,7 +35,7 @@
                     android:layout_height="match_parent"
                     android:text="user name "
                     android:textAlignment="textStart"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_marginStart="20dp"/>
 
@@ -53,9 +53,39 @@
                 android:layout_height="wrap_content"
                 android:text="user status"
                 android:textAlignment="textStart"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginStart="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/requests_accept_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accept"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/background_light"
+                    android:padding="3dp"
+                    android:background="#143491" />
+                <Button
+                    android:id="@+id/requests_cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/background_light"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="10dp"
+                    android:padding="3dp"
+                    android:background="#D11515"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
