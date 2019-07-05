@@ -1,46 +1,50 @@
 {
   "project_info": {
-    "project_number": "164191580424",
-    "firebase_url": "https://sweetchat-2d5df.firebaseio.com",
-    "project_id": "sweetchat-2d5df",
-    "storage_bucket": "sweetchat-2d5df.appspot.com"
+    "project_number": "126006447434",
+    "firebase_url": "https://sweetchat-daf61.firebaseio.com",
+    "project_id": "sweetchat-daf61",
+    "storage_bucket": "sweetchat-daf61.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:164191580424:android:b15006a8d5459b63",
+        "mobilesdk_app_id": "1:126006447434:android:b15006a8d5459b63",
         "android_client_info": {
           "package_name": "com.example.sweetchat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "164191580424-atu7l6h5drccg6as9gnh0g22rf1rrq2n.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sweetchat",
-            "certificate_hash": "120e004746c77bfdfb088fe1163299fc9c5cf62a"
-          }
-        },
-        {
-          "client_id": "164191580424-5hu055qjcke0d68ck54466m2uin719p7.apps.googleusercontent.com",
+          "client_id": "126006447434-e1od0mcuf5678jvbhunhvsjd2l0qmu9g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.sweetchat",
             "certificate_hash": "b1461a04f6ac4dbfdf250897a768ef2d6c321b31"
           }
+        },
+        {
+          "client_id": "126006447434-atr54nvlo0vggf9sp35ac60t50rge7d6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sweetchat",
+            "certificate_hash": "657867852652b424559613546f6edb287aeed937"
+          }
+        },
+        {
+          "client_id": "126006447434-16imdnepi46q1qfs4m5dl37vpp7cso60.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDfZ-GuoAvoDDLrFXKQlsjoSrDSNyeTntE"
+          "current_key": "AIzaSyBpQp-dT4gRHIt-8gY0Kq_GzeApU9mvMnk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "164191580424-jiin15mohs6la1kevnd1dv0llov25m0c.apps.googleusercontent.com",
+              "client_id": "126006447434-16imdnepi46q1qfs4m5dl37vpp7cso60.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
