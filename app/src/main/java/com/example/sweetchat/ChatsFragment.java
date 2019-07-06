@@ -75,13 +75,14 @@ public class ChatsFragment extends Fragment {
             protected void onBindViewHolder(@NonNull final ChatsViewHolder holder, int position, @NonNull Contacts model) {
 
                 final String UsersIDs = getRef(position).getKey();
+                final String[] retImage = {"default_image"};
                 UsersRef.child(UsersIDs).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
                             if(dataSnapshot.hasChild("image")){
-                                final String retImage = dataSnapshot.child("image").getValue().toString();
-                                Picasso.get().load(retImage).into(holder.profileImage);
+                                retImage[0] = dataSnapshot.child("image").getValue().toString();
+                                Picasso.get().load(retImage[0]).into(holder.profileImage);
                             }
                             final String retName = dataSnapshot.child("name").getValue().toString();
                             final String retStatus = dataSnapshot.child("status").getValue().toString();
@@ -94,6 +95,7 @@ public class ChatsFragment extends Fragment {
                                     Intent chatIntent = new Intent(getContext(), ChatActivity.class);
                                     chatIntent.putExtra("chat_user_id", UsersIDs);
                                     chatIntent.putExtra("chat_user_name", retName);
+                                    chatIntent.putExtra("chat_user_image", retImage[0]);
                                     startActivity(chatIntent);
                                 }
                             });
