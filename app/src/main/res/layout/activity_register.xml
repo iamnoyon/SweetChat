@@ -13,7 +13,9 @@
         android:src="@drawable/signup_photo"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:scaleType="center"/>
+        android:scaleType="fitCenter"
+        />
+
     <EditText
         android:id="@+id/register_email"
         android:layout_width="match_parent"
@@ -27,7 +29,8 @@
         android:drawableStart="@drawable/email"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="17dp"
-        android:layout_marginRight="17dp"/>
+        android:layout_marginRight="17dp"
+        />
 
     <EditText
         android:id="@+id/register_password"
@@ -42,7 +45,8 @@
         android:drawableStart="@drawable/password"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="17dp"
-        android:layout_marginRight="17dp"/>
+        android:layout_marginRight="17dp"
+        />
 
     <Button
         android:id="@+id/register_button"
@@ -57,21 +61,23 @@
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textColor="@android:color/background_light"
-        android:background="@drawable/buttons" />
+        android:background="@drawable/buttons"
+        />
 
     <TextView
-        android:id="@+id/already_have_an_account_link"
+        android:id="@+id/already_have_account_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/register_button"
-        android:text="Already have an account?"
+        android:text="Already have an Account ?"
         android:layout_marginTop="2dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="23dp"
         android:textAlignment="center"
         android:textSize="17sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimaryDark"
+        />
 
 </RelativeLayout>
